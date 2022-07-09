@@ -1,0 +1,9 @@
+<%= form_for(@tasks) do |f| %>
+<%= f.label :title %>
+<%= f.text :title%>
+
+<%= f.label :details%>
+<%= f.text :details%>
+<% end %>
+
+<%= f.submit class: 'btn btn-primary'%>

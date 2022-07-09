@@ -1,0 +1,14 @@
+<h1>Tasks</h1>
+
+<%= link_to 'Create a new Task', tasks_new_path, class: 'btn btn-primary'%>
+
+<% @tasks.each do |task|%>
+  <li>
+    <p>
+      <%= link_to task_path(task) do %>
+      <%= check_box_tag :completed, "", task.completed %>
+      <%= task.title%>
+      <% end %>
+    </p>
+  </li>
+<% end %>
